@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assn-6|Set-C|Que-1</title>
+    <style>
+      body {
+        background-color: #d39ac2;
+        color: #272525;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        min-width: 400px;
+        padding: 30px;
+      }
+
+      label {
+        font-size: 20px;
+        font-style: oblique;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      input {
+        height: 50px;
+        font-size: 29px;
+        text-align: center;
+      }
+
+      #ans-here {
+        color: #383434;
+      }
+
+      .btn {
+        font-size: 23px;
+        padding: 17px 30px;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Print Sum of Digit of Number</h1>
+      <h2 id="ans-here">Ans-here</h2>
+      <input type="number" value="0" id="givenNumber" min="1" />
+
+      <button class="btn" onclick="solution()">Sum</button>
+    </div>
+
+    <script>
+      function solution() {
+        var ans = document.getElementById("ans-here");
+        var digits = document.getElementById("givenNumber").value;
+        var sum = 0;
+
+        while (digits) {
+          sum += digits % 10;
+          digits = Math.floor(digits / 10);
+        }
+        ans.innerText = `sum of all digits is ${sum}`;
+       
+      }
+    </script>
+  </body>
+</html>
